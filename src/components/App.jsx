@@ -7,6 +7,8 @@ import DisplayName from './DisplayName/DisplayName';
 import NameList from './NameList/NameList';
 import SuperheroTable from './SuperheroTable/SuperheroTable';
 import SuperheroCreator from './SuperheroCreator/SuperheroCreator';
+// import axios from 'axios';
+// import Jokes from './Jokes';
 
 
 class App extends Component {
@@ -18,6 +20,7 @@ class App extends Component {
            lastName: '-n-Stitch',
            names: ['Tom', 'Jerry', 'Mickey Mouse', 'Minnie Mouse', 'Donald Duck'],
            alertUser: 'devCodeCamp',
+        //    getJokes: [],
            superheroes: [
                 {
                     superheroId: 1,
@@ -41,7 +44,20 @@ class App extends Component {
             
         }
     }
-  
+    alertUser = () => {
+        console.log('devCodeCamp')
+        this.setState({
+            alert: this.alertUser
+        })
+    }
+
+//     componentDidMount() {
+//         axios.get('https://v2.jokeapi.dev/joke/Programming?type=twopart&amount=5')
+//         .then(response => this.setState({
+//             jokes: response.data
+//     }));
+// }
+
     // createSuperhero = (newSuperhero) => {
     //     console.log('From the createSuperhero on App component', newSuperhero);
     //     this.superheroesList.push(newSuperhero)
@@ -57,7 +73,7 @@ class App extends Component {
             <AlertUser alertUser={this.state.alertUser}/>
             <SuperheroTable superheroesList={this.state.superheroes}/>
             <SuperheroCreator createNewSuperhero={this.createSuperhero} />
-
+            {/* <Jokes getJokes={this.state.getJokes} /> */}
         </React.Fragment>
         );
     }

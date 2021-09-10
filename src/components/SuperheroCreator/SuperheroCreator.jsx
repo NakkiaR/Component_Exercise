@@ -30,14 +30,14 @@ class SuperheroCreator extends Component {
             <hr/>
             <form onSubmit={this.handleSubmit}>
                 <label>Superhero ID</label>
-                <input name="number" onChange={this.handleChange} value={this.state.superheroId} />
+                <input uniqueId="number" onChange={this.handleChange} value={this.state.superheroId} />
                 <label>Name</label>
                 <input name="name" onChange={this.handleChange} value={this.state.name} />
                 <label>Primary Ability</label>
                 <input name="name" onChange={this.handleChange} value={this.state.primaryAbility} />
                 <label>Secondary Ability</label>
                 <input name="name" onChange={this.handleChange} value={this.state.secondaryAbility} />
-                <button type="submit">Create Superhero</button>
+                <button type="add">Create Superhero</button>
             </form>
             </div>
           );

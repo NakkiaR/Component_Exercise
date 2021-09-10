@@ -13,6 +13,7 @@ class AlertUser extends React.Component {
             <h2>Exercise 3</h2>
             <hr/>
             <button onClick={this.props.alertUser}>Click Me!</button>
+            {/* <button onClick="alert">Click Me</button> */}
         </div>
       );
     }
