@@ -5,7 +5,7 @@ import React from 'react'
 
 class AlertUser extends React.Component {
     click_the_button() {
-      alert("alertUser");
+      alert(this);
     }
     render() {
       return (

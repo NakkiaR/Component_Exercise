@@ -6,13 +6,13 @@ import './App.css';
 import DisplayName from './DisplayName/DisplayName';
 import NameList from './NameList/NameList';
 import SuperheroTable from './SuperheroTable/SuperheroTable';
+import SuperheroCreator from './SuperheroCreator/SuperheroCreator';
 
 
 class App extends Component {
 
     constructor(props) {
         super(props);
-       
         this.state = {
            firstName: 'Lilo',
            lastName: '-n-Stitch',
@@ -38,12 +38,17 @@ class App extends Component {
                     secondaryAbility: 'Shoots Web'
                 }
             ],
+            
         }
     }
-           
-        
-
-
+  
+    // createSuperhero = (newSuperhero) => {
+    //     console.log('From the createSuperhero on App component', newSuperhero);
+    //     this.superheroesList.push(newSuperhero)
+    //     this.setState({
+    //         superheroId: this.superheroes.length - 1
+    //     })
+    // }
     render() {
         return (
         <React.Fragment>
@@ -51,6 +56,8 @@ class App extends Component {
             <NameList nameListExercise={this.state.names}/>
             <AlertUser alertUser={this.state.alertUser}/>
             <SuperheroTable superheroesList={this.state.superheroes}/>
+            <SuperheroCreator createNewSuperhero={this.createSuperhero} />
+
         </React.Fragment>
         );
     }
