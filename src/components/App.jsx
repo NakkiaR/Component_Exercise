@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import AlertUser from './AlertUser/AlertUser';
+// import reactDom from 'react-dom';
+// import AlertTemplate from 'react-alert-template-basic'
 import './App.css';
 import DisplayName from './DisplayName/DisplayName';
 import NameList from './NameList/NameList';
@@ -14,7 +17,7 @@ class App extends Component {
            firstName: 'Lilo',
            lastName: '-n-Stitch',
            names: ['Tom', 'Jerry', 'Mickey Mouse', 'Minnie Mouse', 'Donald Duck'],
-        //    alertUser:
+           alertUser: 'devCodeCamp',
            superheroes: [
                 {
                     superheroId: 1,
@@ -46,6 +49,7 @@ class App extends Component {
         <React.Fragment>
             <DisplayName fName={this.state.firstName} lName={this.state.lastName}/>
             <NameList nameListExercise={this.state.names}/>
+            <AlertUser alertUser={this.state.alertUser}/>
             <SuperheroTable superheroesList={this.state.superheroes}/>
         </React.Fragment>
         );
